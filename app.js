@@ -107,6 +107,22 @@ function changeSlide() {
   slides[current].classList.add("active");
 }
 
-setInterval(changeSlide, 4000); // change every 4 sec
+setInterval(changeSlide, 2000); // change every 4 sec
+
+
+let track = document.querySelector('.slideshow-track');
+let slide = document.querySelectorAll('.slide');
+let index = 0;
+let visible = 4; // show 4 at a time
+
+function slideShow() {
+  index++;
+  if (index > slide.length - visible) {
+    index = 0; // restart when reach end
+  }
+  track.style.transform = `translateX(-${index * (100 / visible)}%)`;
+}
+
+setInterval(slideShow, 3000); // every 3 sec
 
 
