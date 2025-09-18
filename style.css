@@ -819,13 +819,14 @@ footer{
 /* Featured Projects Section */
 .projects {
     background-color: var(--bgcolor);
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 h4{
             margin-bottom: 18px;
             font-size: 40px;
             color: var(--accent);
+            text-align: center;
  }
 
 .projects-header {
@@ -839,6 +840,7 @@ h4{
     /* font-weight: 700; */
     margin-bottom: 10px;
     text-align: center;
+    margin-left:36%;
 }
 
 .projects-header h2 {
@@ -851,8 +853,9 @@ h4{
 .project-cards {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 80px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .project-cards .card {
