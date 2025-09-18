@@ -145,7 +145,7 @@ a{
  position: fixed;
  top: 0;
  z-index: 1000;
- padding: 20px 0;
+ padding: 0px 0;
  } .header-scrolled { padding: 0.5rem 0;
  box-shadow: 0 8px 32px var(--shadow);
  } .header-inner { display: flex;
@@ -369,9 +369,9 @@ nav ul li a{
     /* Typing Effect */
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid var(--white); /* Cursor */
+    border-right: 0px solid var(--white); /* Cursor */
     width: 0;
-    animation: typingH4 2s steps(25, end) forwards, blink 0.7s step-end infinite;
+    animation: typingH4 1s steps(25, end) forwards, blink 0.7s step-end infinite;
 }
 
 .hero-content h1 {
@@ -380,10 +380,10 @@ nav ul li a{
     /* Typing Effect */
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid var(--white); /* Cursor */
+    border-right: 0px solid var(--white); /* Cursor */
     width: 0;
     text-align: center;
-    animation: typingH1 2s steps(40, end) forwards 3s, blink 0.7s step-end infinite 3s;
+    animation: typingH1 1s steps(40, end) forwards 1s, blink 0.7s step-end infinite 3s;
 }
 
 /* Optional if you later want the paragraph with typing */
