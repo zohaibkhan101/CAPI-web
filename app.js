@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = Number(counterEl.getAttribute("data-target")) || 0;
     const durationMs = 1200;
     const startTime = performance.now();
-    const startValue = 0;
+    const startValue = 1500;
     const endValue = target;
 
     const step = (now) => {
