@@ -248,13 +248,119 @@ const translations = {
 // Language switching functionality
 class LanguageManager {
     constructor() {
-        this.currentLanguage = localStorage.getItem('language') || 'en';
+        this.currentLanguage = this.detectLanguage();
         this.init();
+    }
+    
+    detectLanguage() {
+        // Check if user has previously set a language preference
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            return savedLanguage;
+        }
+        
+        // Auto-detect browser language
+        const browserLanguage = navigator.language || navigator.userLanguage;
+        
+        // Check if browser language is Arabic or any Arabic variant
+        const arabicLanguages = [
+            'ar', 'ar-SA', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 
+            'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-OM', 'ar-QA', 
+            'ar-SY', 'ar-TN', 'ar-YE', 'ar-PS', 'ar-SD', 'ar-MR', 'ar-SO'
+        ];
+        
+        // Check for exact match first
+        if (arabicLanguages.includes(browserLanguage)) {
+            return 'ar';
+        }
+        
+        // Check for Arabic language code (ar-*)
+        if (browserLanguage.startsWith('ar')) {
+            return 'ar';
+        }
+        
+        // Default to English
+        return 'en';
     }
     
     init() {
         this.updateLanguage();
         this.addLanguageSwitcher();
+        this.showLanguageDetectionNotification();
+    }
+    
+    showLanguageDetectionNotification() {
+        // Only show notification if language was auto-detected (not manually set)
+        const savedLanguage = localStorage.getItem('language');
+        if (!savedLanguage) {
+            const detectedLanguage = this.detectLanguage();
+            if (detectedLanguage === 'ar') {
+                this.showNotification('تم اكتشاف اللغة العربية تلقائياً', 'Arabic language detected automatically');
+            }
+        }
+    }
+    
+    showNotification(arabicText, englishText) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #AA6C39;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 10000;
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            font-size: 14px;
+            max-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        `;
+        
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Set notification text based on current language
+        notification.textContent = this.currentLanguage === 'ar' ? arabicText : englishText;
+        
+        // Add close button
+        const closeBtn = document.createElement('span');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.style.cssText = `
+            float: right;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        `;
+        closeBtn.onclick = () => {
+            notification.style.animation = 'slideOut 0.3s ease-in';
+            setTimeout(() => notification.remove(), 300);
+        };
+        
+        notification.appendChild(closeBtn);
+        document.body.appendChild(notification);
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
     }
     
     switchLanguage() {

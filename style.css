@@ -1380,8 +1380,8 @@ h4{
 }
 /* Language button styling */
 .lang-switch {
-  background: var(--primary-color);
-  color: #151313;
+  background: green;
+  color:white;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
@@ -1392,7 +1392,7 @@ h4{
 }
 
 .lang-switch:hover {
-  background: var(--primary-light);
+  background: green;
 }
 
 /* Mobile adjustments */

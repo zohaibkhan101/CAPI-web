@@ -85,6 +85,8 @@ The website now supports both English and Arabic languages with:
 - [x] Footer translations
 - [x] Responsive design for both languages
 - [x] Language preference persistence
+- [x] **Auto language detection** - Automatically detects browser language
+- [x] **Smart notifications** - Shows detection notification for Arabic users
 
 ### 🎯 Key Benefits:
 1. **Complete Localization**: Every piece of text is translated
@@ -93,6 +95,8 @@ The website now supports both English and Arabic languages with:
 4. **Persistent**: Remembers user's language preference
 5. **Responsive**: Works on all device sizes
 6. **SEO Friendly**: Proper lang attributes for search engines
+7. **Smart Detection**: Automatically detects Arabic browser language
+8. **User Notifications**: Informs users when language is auto-detected
 
 ## Technical Details
 
@@ -111,11 +115,25 @@ The website now supports both English and Arabic languages with:
 
 ## Testing
 
+### Basic Arabic Test:
 1. Open `test-arabic.html` in a browser
 2. Click the language switcher to test functionality
 3. Verify all text changes to Arabic
 4. Check that layout switches to RTL
 5. Test form placeholders and labels
+
+### Auto Language Detection Test:
+1. Open `test-language-detection.html` in a browser
+2. Clear your language preference using the "Clear Language Preference" button
+3. Refresh the page to test auto-detection
+4. If your browser language is Arabic, the page should automatically load in Arabic
+5. You should see a notification: "تم اكتشاف اللغة العربية تلقائياً" (Arabic language detected automatically)
+6. Try changing your browser language settings to test different scenarios
+
+### Browser Language Testing:
+- **Chrome**: Settings → Advanced → Languages → Add Arabic
+- **Firefox**: Settings → General → Language → Choose Arabic
+- **Safari**: System Preferences → Language & Region → Add Arabic
 
 ## Browser Support
 
