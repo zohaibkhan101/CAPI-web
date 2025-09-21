@@ -791,43 +791,50 @@ footer{
 
 /* Quick Stats Section */
 .quick-stats {
-    background-color: var(--bgcolor);
-    padding: 200px 20;
+    background-image: url(images/decor1.png);   /* match service style */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
     margin-top: 10px;
-    margin-bottom: auto;
 }
 
-.quick-stats .container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch; 
-    gap: 100px;
-    overflow-x: hidden;
-}
-.quick-stats .stats {
-    display: flex;              /* make children horizontal */
-    flex-direction: row;        /* align in a row */
-    flex-wrap: nowrap;          /* prevent wrapping */
-    justify-content: center;    /* center horizontally */
-    align-items: stretch;       
-    gap: 32px;                  /* space between cards */
-}
-.quick-stats .stat h3 {
-  font-size: 32px;
-  color: var(--primary);
-  font-weight: 700;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
-}
-.quick-stats .stat {
-    padding: 80px;
+.quick-stats-header {
     text-align: center;
-    background-color: white;
+    margin-bottom: 60px;
+}
+
+.quick-stats-header h4 {
+    margin-bottom: 18px;
+    font-size: 40px;
+    color: var(--accent);
+}
+
+.quick-stats-header h2 {
+    font-size: 32px;
+    color: #797979;
+}
+
+/* Cards container */
+.quick-stats .stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* allow wrap like service cards */
+    gap: 32px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+/* Individual stat card */
+.quick-stats .stat {
+     width: 280px;              /* fixed width like service card */
+    height: 220px;             /* fixed height */
+    padding: 50px;
+    text-align: center;
+    background-color: var(--white);
     border-radius: 16px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: transform 0.3s ease;
-    gap: 38px;
 }
 
 .quick-stats .stat:hover {
@@ -845,6 +852,32 @@ footer{
     font-size: 14px;
     color: var(--bodycopyclr);
     font-weight: 500;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+    .quick-stats .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .quick-stats .stat {
+         width: 100%;             /* full width on mobile */
+        max-width: 320px;        /* but not too big */
+        height: auto;            /* allow height to expand */
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quick-stats .stat h3 {
+        font-size: 24px;
+    }
+
+    .quick-stats .stat p {
+        font-size: 13px;
+    }
 }
 
 /* Featured Projects Section */
