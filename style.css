@@ -408,7 +408,7 @@ nav ul li a{
 
     /* Typing Effect */
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     border-right: 0px solid var(--white); /* Cursor */
     width: 0;
     animation: typingH4 1s steps(25, end) forwards, blink 0.7s step-end infinite;
@@ -419,7 +419,7 @@ nav ul li a{
 
     /* Typing Effect */
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     border-right: 0px solid var(--white); /* Cursor */
     width: 0;
     text-align: center;
@@ -778,7 +778,7 @@ nav ul li a{
 /* Footer */
 footer{
     background-color:#293D52;
-    padding: 50px 0;
+    padding: 50px 20px;
 
     .container{
         justify-content: space-between;
@@ -896,7 +896,7 @@ footer{
 }
 
 .quick-stats .stat h3 {
-    font-size: 32px;
+    font-size: 24px;
     color: var(--primary);
     font-weight: 700;
     margin-bottom: 18px;
@@ -1019,7 +1019,7 @@ h4{
 /* Why CAPI Section */
 .why-capi {
     background-color: var(--bgcolor);
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
