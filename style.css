@@ -190,7 +190,9 @@ a{
  font-size: 1.5rem;
  cursor: pointer;
  color: var(--text);
- } /* ===== BUTTONS ===== */ .btn { display: inline-flex;
+ } /* ===== BUTTONS ===== */ 
+ .btn 
+ { display: inline-flex;
  align-items: center;
  gap: 0.5rem;
  padding: 1rem 2rem;
@@ -203,20 +205,49 @@ a{
  border: none;
  position: relative;
  overflow: hidden;
- } .btn-primary { background-color: var(--primary-color);
+ } 
+ .btn-primary { background-color: var(--primary-color);
  color: #fff;
  padding: 10px 20px;
  border-radius: 5px;
- } .btn-primary:hover { transform: translateY(-2px);
- box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
- } .btn-outline { border: 2px solid var(--primary-color);
+ } 
+ .btn-primary:hover { 
+    transform: translateY(-2px);
+ box-shadow: 0 15px 35px rgba(217, 165, 8, 0.4);
+ } 
+ .btn-outline { border: 2px solid var(--primary-color);
  color: var(--primary-color);
  padding: 10px 20px;
  border-radius: 5px;
- } .btn-outline:hover { background: var(--primary);
+ } 
+ .btn-outline:hover { background: var(--primary);
  color: white;
  border-color: var(--primary);
  transform: translateY(-2px);}
+ /* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .main-nav {
+    flex-direction: column;  /* stack links */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 200px;
+    padding: 20px;
+    gap: 15px;
+    display: none;  /* hide by default */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  .main-nav.active {
+    display: flex;  /* show menu when toggled */
+  }
+}
 /* utility class */
 
 .container{

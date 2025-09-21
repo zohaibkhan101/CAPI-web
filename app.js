@@ -126,3 +126,11 @@ function slideShow() {
 setInterval(slideShow, 3000); // every 3 sec
 
 
+
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.main-nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
