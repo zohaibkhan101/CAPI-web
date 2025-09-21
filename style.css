@@ -1378,3 +1378,51 @@ h4{
 @media (max-width:768px){
     .content article .service-image{ height: 180px; }
 }
+/* Language button styling */
+.lang-switch {
+  background: var(--primary-color);
+  color: #151313;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+  background: var(--primary-light);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .lang-switch {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* RTL support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl .main-nav {
+  flex-direction: row-reverse; /* flip nav links */
+}
+
+.rtl .main-nav a {
+  margin-left: 0;
+  margin-right: 20px; /* spacing from right */
+}
+
+.rtl .hero-content {
+  text-align: right;
+}
+
+.rtl .cta {
+  justify-content: flex-end; /* align buttons to the right */
+}

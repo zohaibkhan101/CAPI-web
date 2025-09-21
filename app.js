@@ -133,4 +133,16 @@ const nav = document.querySelector('.main-nav');
 toggle.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
+const langSwitch = document.querySelector(".lang-switch");
+
+langSwitch.addEventListener("click", () => {
+  document.documentElement.classList.toggle("rtl"); // toggle RTL class
+  document.documentElement.setAttribute(
+    "lang",
+    document.documentElement.classList.contains("rtl") ? "ar" : "en"
+  );
+
+  // Swap button text
+  langSwitch.textContent = langSwitch.textContent === "عربي" ? "EN" : "عربي";
+});
 

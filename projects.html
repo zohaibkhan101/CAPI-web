@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap' rel='stylesheet'>
     <link rel="icon" type="image/png" href="images/logo.png"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rtl-styles.css">
     <title>CAPI Global</title>
 </head>
 <body>
@@ -19,53 +21,54 @@
       ☰
     </button>
       <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="index.html" data-translate="home">Home</a>
+        <a href="about.html" data-translate="about">About</a>
+        <a href="services.html" data-translate="services">Services</a>
+        <a href="projects.html" data-translate="projects">Projects</a>
+        <a href="contact.html" class="btn btn-primary" data-translate="contact">Contact</a>
       </nav>
+      <button class="lang-switch" aria-label="Switch Language">عربي</button>
     </div>
   </header>
 
   <main>
     <section class="projects">
         <header class="projects-header container">
-            <h4>Featured Projects</h4>
+            <h4 data-translate="featuredProjects">Featured Projects</h4>
             <!-- <h2>Our Recent Work</h2> -->
         </header>
         <div class="project-cards container">
             <div class="card">
                 <img src="images/project images/basketball4.jpeg" alt="Heritage Mud Restoration">
-                <h3>Basketball Court Construction </h3>
-                <p>Complete basketball court construction including foundation, flooring, markings, and finishing for optimal gameplay.</p>
+                <h3 data-translate="basketballCourt">Basketball Court Construction </h3>
+                <p data-translate="basketballCourtDesc">Complete basketball court construction including foundation, flooring, markings, and finishing for optimal gameplay.</p>
             </div>
             <div class="card">
                 <img src="images/project images/comercial.jpg" alt="Commercial Fit-out">
-                <h3>Commercial Fit-out</h3>
-                <p>Transforming commercial spaces with modern designs and efficient layouts.</p>
+                <h3 data-translate="commercialFitout">Commercial Fit-out</h3>
+                <p data-translate="commercialFitoutDesc">Transforming commercial spaces with modern designs and efficient layouts.</p>
             </div>
             <div class="card">
                 <img src="images/project images/hvac3.png" alt="Water Feature Installation">
-                <h3>MEP Works</h3>
-                <p>Powering projects with smart MEP solutions for seamless operations.</p>
+                <h3 data-translate="mepWorks">MEP Works</h3>
+                <p data-translate="mepWorksDesc">Powering projects with smart MEP solutions for seamless operations.</p>
             </div>
             <div class="card">
     <img src="images/project images/landscaping1.jpg" alt="Landscaping">
-    <h3>Landscaping</h3>
-    <p>Professional landscaping services including gardens, lawns, outdoor features, and hardscape elements to enhance aesthetics.</p>
+    <h3 data-translate="landscaping">Landscaping</h3>
+    <p data-translate="landscapingDesc">Professional landscaping services including gardens, lawns, outdoor features, and hardscape elements to enhance aesthetics.</p>
 </div>
 
 <div class="card">
     <img src="images/project images/woodworks2.jpg" alt="Woodworks">
-    <h3>Woodworks</h3>
-    <p>Custom woodwork solutions including furniture, paneling, cabinetry, and decorative finishes to complement interior designs.</p>
+    <h3 data-translate="woodworks">Woodworks</h3>
+    <p data-translate="woodworksDesc">Custom woodwork solutions including furniture, paneling, cabinetry, and decorative finishes to complement interior designs.</p>
 </div>
 
 <div class="card">
     <img src="images/project images/finishing2.jpg" alt="Finishing">
-    <h3>Finishing</h3>
-    <p>High-quality finishing services including painting, plastering, tiling, and final touches for polished project completion.</p>
+    <h3 data-translate="finishing">Finishing</h3>
+    <p data-translate="finishingDesc">High-quality finishing services including painting, plastering, tiling, and final touches for polished project completion.</p>
 </div>
         </div>
         <div style="text-align: center;">
@@ -84,7 +87,7 @@
                     
                    
                 </div>
-                <p><br>Your trusted partner in construction and design.</p>
+                <p><br><span data-translate="trustedPartner">Your trusted partner in construction and design.</span></p>
                 <img src="images/vision.png" alt="CAPI Global Logo" class="logo-vision">
                 <div class="icons">
                     <a href="https://www.facebook.com/profile.php?id=61580083493663"><i class="bx bxl-facebook-circle bx-sm"></i></a>
@@ -94,17 +97,17 @@
                 </div>
             </div>
             <div class="two">
-                <h3>Links</h3>
+                <h3 data-translate="links">Links</h3>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./about.html">Testimony</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./index.html" data-translate="home">Home</a></li>
+                    <li><a href="./services.html" data-translate="services">Services</a></li>
+                    <li><a href="./projects.html" data-translate="projects">Projects</a></li>
+                    <li><a href="./about.html" data-translate="testimony">Testimony</a></li>
+                    <li><a href="./contact.html" data-translate="contact">Contact</a></li>
                 </ul>
             </div>
            <div class="three">
-                <h3>Head Office</h3>
+                <h3 data-translate="headOffice">Head Office</h3>
                 <div>
                     <p>Said Ibn Zaqar, Aziziyah, Jeddah, Saudi Arabia</p>
                     <p>+966-509776976</p>
@@ -120,7 +123,7 @@
             </div> 
             </div>
             <div class="four">
-                <h3>Contact</h3>
+                <h3 data-translate="contactInfo">Contact</h3>
                 <div>
                     <p>info@capi-ksa.com</p>
                     <p>+966-509776976</p>
@@ -129,6 +132,7 @@
         </div>
     </footer>
 
+  <script src="translations.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

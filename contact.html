@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rtl-styles.css">
     <title>CAPI Global</title>
 </head>
 <body>
@@ -18,12 +20,13 @@
       ☰
     </button>
           <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html" class="btn btn-primary">Contact</a>
+            <a href="index.html" data-translate="home">Home</a>
+            <a href="about.html" data-translate="about">About</a>
+            <a href="services.html" data-translate="services">Services</a>
+            <a href="projects.html" data-translate="projects">Projects</a>
+            <a href="contact.html" class="btn btn-primary" data-translate="contact">Contact</a>
           </nav>
+          <button class="lang-switch" aria-label="Switch Language">عربي</button>
         </div>
       </header>
     <!-- hero Section
@@ -54,38 +57,38 @@
 <section class="contact">
     <header class="contact-header container">
         <div>
-            <h4>Contact Us</h4>
-            <h1>We'd Love to Hear From You</h1>
-            <p>Whether you have a question about our services, projects, or anything else, our team is ready to answer all your questions.</p>
+            <h4 data-translate="contactUs">Contact Us</h4>
+            <h1 data-translate="contactTitle">We'd Love to Hear From You</h1>
+            <p data-translate="contactSubtitle">Whether you have a question about our services, projects, or anything else, our team is ready to answer all your questions.</p>
             
         </div>
     </header>
     <div class="contact-content container">
         <!-- Contact Info -->
         <div class="contact-info">
-            <h3>Get in Touch</h3>
-            <p><strong>Headquarters:</strong> Jeddah, Saudi Arabia</p>
-            <p><strong>Branches:</strong> Riyadh · Jeddah · Madinah</p>
-            <p><strong>Phone:</strong> +966-50 977 6976</p>
-            <p><strong>Email:</strong> info@capi-ksa.com</p>
+            <h3 data-translate="getInTouch">Get in Touch</h3>
+            <p><strong data-translate="headquarters">Headquarters:</strong> Jeddah, Saudi Arabia</p>
+            <p><strong data-translate="branches">Branches:</strong> Riyadh · Jeddah · Madinah</p>
+            <p><strong data-translate="phone">Phone:</strong> +966-50 977 6976</p>
+            <p><strong data-translate="email">Email:</strong> info@capi-ksa.com</p>
         </div>
 
         <!-- Contact Form -->
         <div class="contact-form">
-            <h3>Send Us a Message</h3>
+            <h3 data-translate="sendMessage">Send Us a Message</h3>
             <form id="contactForm" action="mailto:info@capi-ksa.com" method="post" enctype="text/plain">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                <label for="name" data-translate="fullName">Full Name</label>
+                <input type="text" id="name" name="name" data-placeholder="enterName" placeholder="Enter your name" required />
                 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                <label for="email" data-translate="email">Email</label>
+                <input type="email" id="email" name="email" data-placeholder="enterEmail" placeholder="Enter your email" required />
                 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
+                <label for="message" data-translate="message">Message</label>
+                <textarea id="message" name="message" rows="6" data-placeholder="writeMessage" placeholder="Write your message here" required></textarea>
                 
                 <div class="form-actions">
-                    <button type="submit" class="btn primary">Send</button>
-                    <button type="reset" class="btn ghost">Reset</button>
+                    <button type="submit" class="btn primary" data-translate="send">Send</button>
+                    <button type="reset" class="btn ghost" data-translate="reset">Reset</button>
                 </div>
             </form>
         </div>
@@ -117,7 +120,7 @@
                     
                    
                 </div>
-                <p><br>Your trusted partner in construction and design.</p>
+                <p><br><span data-translate="trustedPartner">Your trusted partner in construction and design.</span></p>
                 <img src="images/vision.png" alt="CAPI Global Logo" class="logo-vision">
                 <div class="icons">
                     <a href="https://www.facebook.com/profile.php?id=61580083493663"><i class="bx bxl-facebook-circle bx-sm"></i></a>
@@ -127,17 +130,17 @@
                 </div>
             </div>
             <div class="two">
-                <h3>Links</h3>
+                <h3 data-translate="links">Links</h3>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./about.html">Testimony</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./index.html" data-translate="home">Home</a></li>
+                    <li><a href="./services.html" data-translate="services">Services</a></li>
+                    <li><a href="./projects.html" data-translate="projects">Projects</a></li>
+                    <li><a href="./about.html" data-translate="testimony">Testimony</a></li>
+                    <li><a href="./contact.html" data-translate="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="three">
-                <h3>Head Office</h3>
+                <h3 data-translate="headOffice">Head Office</h3>
                 <div>
                     <p>Said Ibn Zaqar, Aziziyah, Jeddah, Saudi Arabia</p>
                     <p>+966-509776976</p>
@@ -153,7 +156,7 @@
             </div> 
             </div> 
             <div class="four">
-                <h3>Contact</h3>
+                <h3 data-translate="contactInfo">Contact</h3>
                 <div>
                     <p>info@capi-ksa.com</p>
                     <p>+966-509776976</p>
@@ -163,6 +166,7 @@
     </footer>
 
     <!--js file -->
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

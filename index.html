@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap' rel='stylesheet'>
     <link rel="icon" type="image/png" href="images/logo.png"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rtl-styles.css">
     <title>CAPI Global</title>
 </head>
 <body>
@@ -19,12 +21,13 @@
       ☰
     </button>
       <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="index.html" data-translate="home">Home</a>
+        <a href="about.html" data-translate="about">About</a>
+        <a href="services.html" data-translate="services">Services</a>
+        <a href="projects.html" data-translate="projects">Projects</a>
+        <a href="contact.html" class="btn btn-primary" data-translate="contact">Contact</a>
       </nav>
+      <button class="lang-switch" aria-label="Switch Language">عربي</button>
     </div>
   </header>
     <!-- hero Section
@@ -67,33 +70,33 @@
   </div>
 
   <div class="hero-content">
-    <h4>CAPI Global Company</h4>
-    <h1>Preserving Saudi Heritage</h1>
-    <h1>Building the Future</h1>
+    <h4 data-translate="companyName">CAPI Global Company</h4>
+    <h1 data-translate="heroTitle1">Preserving Saudi Heritage</h1>
+    <h1 data-translate="heroTitle2">Building the Future</h1>
     <div class="cta">
-            <a href="./about.html" class="btn primary">Learn More</a>
-            <a href="./contact.html" class="btn ghost">Get Quote</a>
+            <a href="./about.html" class="btn primary" data-translate="learnMore">Learn More</a>
+            <a href="./contact.html" class="btn ghost" data-translate="getQuote">Get Quote</a>
           </div>
   </div>
 </section>
 
 <section class="why-capi">
     <div class="container about-container">
-        <h4>ABOUT US</h4>
-        <p>
+        <h4 data-translate="aboutUs">ABOUT US</h4>
+        <p data-translate="aboutDescription">
             CAPI is a leading Saudi architecture company dedicated to blending cultural heritage with modern design. 
-            In line with Saudi Arabia’s Vision 2030, we specialize in integrating traditional Najdi, Alahsa, and Alhejaz 
+            In line with Saudi Arabia's Vision 2030, we specialize in integrating traditional Najdi, Alahsa, and Alhejaz 
             architectural styles with innovative, contemporary solutions. Our goal is to deliver unique architectural 
-            finishes that preserve the Kingdom’s historical richness while embracing modern functionality. With a 
+            finishes that preserve the Kingdom's historical richness while embracing modern functionality. With a 
             strong focus on creativity, quality, and authenticity, CAPI is committed to becoming a top name in the 
             Saudi construction and architecture industry, leaving a lasting legacy through designs that seamlessly 
             connect the past with the future.
         </p>
         <ul>
-            <li>Alignment with Vision 2030</li>
-            <li>Integrated Services</li>
-            <li>Skilled Team</li>
-            <li>Sustainability & QHSE</li>
+            <li data-translate="alignment">Alignment with Vision 2030</li>
+            <li data-translate="integratedServices">Integrated Services</li>
+            <li data-translate="skilledTeam">Skilled Team</li>
+            <li data-translate="sustainability">Sustainability & QHSE</li>
         </ul>
     </div>
 </section>
@@ -104,19 +107,19 @@
     <div class="stats">
       <div class="stat">
         <h3 data-target="2022">0</h3>
-        <p>Founded</p>
+        <p data-translate="founded">Founded</p>
       </div>
       <div class="stat">
-        <h3>Riyadh  Jeddah  Madinah</h3>
-        <p>Branches</p>
+        <h3 data-translate="riyadhJeddahMadinah">Riyadh  Jeddah  Madinah</h3>
+        <p data-translate="branches">Branches</p>
       </div>
       <div class="stat">
-        <h3 data-target="20">0</h3>
-        <p>Projects</p>
+        <h3 data-translate="20" data-target="20">0</h3>
+        <p data-translate="projects">Projects</p>
       </div>
       <div class="stat">
-        <h3>Saudi Arabia</h3>
-        <p>Coverage</p>
+        <h3 data-translate="saudiArabia">Saudi Arabia</h3>
+        <p data-translate="coverage">Coverage</p>
       </div>
     </div>
   </div>
@@ -125,34 +128,34 @@
     <section class="service">
         <header class="service-header container">
             <div>
-                <h4>Our Services</h4>
-                <h2>Combining heritage craftsmanship with modern techniques.</h2>
+                <h4 data-translate="ourServices">Our Services</h4>
+                <h2 data-translate="servicesSubtitle">Combining heritage craftsmanship with modern techniques.</h2>
             </div>
         </header>
         <div class="service-cards container">
             <div class="card">
                 <i class="bx bx-home-alt-2 bx-lg"></i> <!-- Icon for Mud Houses -->
-                <h3>Mud Houses & Buildings</h3>
-                <p>Construction, restoration and modernization of heritage mud structures with sustainable local materials.</p>
-                <a href="./services.html" class="btn primary">Know More</a>
+                <h3 data-translate="mudHouses">Mud Houses & Buildings</h3>
+                <p data-translate="mudHousesDesc">Construction, restoration and modernization of heritage mud structures with sustainable local materials.</p>
+                <a href="./services.html" class="btn primary" data-translate="knowMore">Know More</a>
             </div>
             <div class="card">
                 <i class="bx bx-building-house bx-lg"></i> <!-- Icon for Civil & Construction Works -->
-                <h3>Civil & Construction Works</h3>
-                <p>Excavation, masonry, concrete, infrastructure and finishing for residential and commercial projects.</p>
-                <a href="./services.html" class="btn primary">Know More</a>
+                <h3 data-translate="civilWorks">Civil & Construction Works</h3>
+                <p data-translate="civilWorksDesc">Excavation, masonry, concrete, infrastructure and finishing for residential and commercial projects.</p>
+                <a href="./services.html" class="btn primary" data-translate="knowMore">Know More</a>
             </div>
             <div class="card">
                 <i class="bx bx-cog bx-lg"></i> <!-- Icon for Electrical & Mechanical Works -->
-                <h3>Electrical & Mechanical Works</h3>
-                <p>Turnkey MEP solutions for hospitals, airports, data centers and hospitality sectors.</p>
-                <a href="./services.html" class="btn primary">Know More</a>
+                <h3 data-translate="electricalMechanical">Electrical & Mechanical Works</h3>
+                <p data-translate="electricalMechanicalDesc">Turnkey MEP solutions for hospitals, airports, data centers and hospitality sectors.</p>
+                <a href="./services.html" class="btn primary" data-translate="knowMore">Know More</a>
             </div>
             <div class="card">
                 <i class="bx bx-water bx-lg"></i> <!-- Icon for Water Features -->
-                <h3>Water Features</h3>
-                <p>Design, installation and refurbishment of fountains and decorative water systems.</p>
-                <a href="./services.html" class="btn primary">Know More</a>
+                <h3 data-translate="waterFeatures">Water Features</h3>
+                <p data-translate="waterFeaturesDesc">Design, installation and refurbishment of fountains and decorative water systems.</p>
+                <a href="./services.html" class="btn primary" data-translate="knowMore">Know More</a>
             </div>
         </div>
     </section>
@@ -163,24 +166,24 @@
     <!-- Featured Projects Section -->
     <section class="projects">
         <header class="projects-header container">
-            <h4>Featured Projects</h4>
+            <h4 data-translate="featuredProjects">Featured Projects</h4>
             <!-- <h2>Our Recent Work</h2> -->
         </header>
         <div class="project-cards container">
             <div class="card">
                 <img src="images/project images/basketball4.jpeg" alt="Heritage Mud Restoration">
-                <h3>Basketball Court Construction </h3>
-                <p>Complete basketball court construction including foundation, flooring, markings, and finishing for optimal gameplay.</p>
+                <h3 data-translate="basketballCourt">Basketball Court Construction </h3>
+                <p data-translate="basketballCourtDesc">Complete basketball court construction including foundation, flooring, markings, and finishing for optimal gameplay.</p>
             </div>
             <div class="card">
                 <img src="images/project images/comercial.jpg" alt="Commercial Fit-out">
-                <h3>Commercial Fit-out</h3>
-                <p>Transforming commercial spaces with modern designs and efficient layouts.</p>
+                <h3 data-translate="commercialFitout">Commercial Fit-out</h3>
+                <p data-translate="commercialFitoutDesc">Transforming commercial spaces with modern designs and efficient layouts.</p>
             </div>
             <div class="card">
                 <img src="images/project images/hvac3.png" alt="Water Feature Installation">
-                <h3>MEP Works</h3>
-                <p>Powering projects with smart MEP solutions for seamless operations.</p>
+                <h3 data-translate="mepWorks">MEP Works</h3>
+                <p data-translate="mepWorksDesc">Powering projects with smart MEP solutions for seamless operations.</p>
             </div>
             
         </div>
@@ -193,7 +196,8 @@
             color: #fff; 
             text-decoration: none; 
             border-radius: 8px; 
-            font-weight: bold;">
+            font-weight: bold;"
+     data-translate="moreProjects">
     More Projects
   </a>
 </div>
@@ -224,7 +228,7 @@
     <section class="about">
         <header class="about-header container">
             <div>
-                <h4>Gallery</h4>
+                <h4 data-translate="gallery">Gallery</h4>
                 <!-- <h2>Learn Who We are</h2> -->
             </div>
         </header>
@@ -293,7 +297,7 @@
                     
                    
                 </div>
-                <p><br>Your trusted partner in construction and design.</p>
+                <p><br><span data-translate="trustedPartner">Your trusted partner in construction and design.</span></p>
                 <img src="images/vision.png" alt="CAPI Global Logo" class="logo-vision">
                 <div class="icons">
                     <a href="https://www.facebook.com/profile.php?id=61580083493663"><i class="bx bxl-facebook-circle bx-sm"></i></a>
@@ -303,17 +307,17 @@
                 </div>
             </div>
             <div class="two">
-                <h3>Links</h3>
+                <h3 data-translate="links">Links</h3>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./services.html">Services</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./about.html">Testimony</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./index.html" data-translate="home">Home</a></li>
+                    <li><a href="./services.html" data-translate="services">Services</a></li>
+                    <li><a href="./projects.html" data-translate="projects">Projects</a></li>
+                    <li><a href="./about.html" data-translate="testimony">Testimony</a></li>
+                    <li><a href="./contact.html" data-translate="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="three">
-                <h3>Head Office</h3>
+                <h3 data-translate="headOffice">Head Office</h3>
                 <div>
                     <p>Said Ibn Zaqar, Aziziyah, Jeddah, Saudi Arabia</p>
                     <p>+966-509776976</p>
@@ -329,7 +333,7 @@
             </div> 
             </div>
             <div class="four">
-                <h3>Contact</h3>
+                <h3 data-translate="contactInfo">Contact</h3>
                 <div>
                     <p>info@capi-ksa.com</p>
                     <p>+966-509776976</p>
@@ -340,6 +344,7 @@
 
 
     <!--js file -->
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
